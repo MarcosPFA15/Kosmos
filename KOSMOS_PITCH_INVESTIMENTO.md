@@ -22,7 +22,7 @@
 | Diferencial | Descrição |
 |-------------|-----------|
 | **Autonomia Real** | Sistema que cria, prioriza e executa tarefas sem intervenção humana |
-| **Memória Persistente** | Conhecimento preservado entre sessões via grafo Neo4j + ontologia |
+| **Memória Persistente** | Conhecimento preservado entre sessões via grafo + ontologia |
 | **Auto-Evolução** | Capacidade de melhorar seu próprio código de forma controlada |
 | **Multimodal** | Processamento unificado de texto, imagem e áudio |
 
