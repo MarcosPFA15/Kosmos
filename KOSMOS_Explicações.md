@@ -443,7 +443,8 @@ gantt
 
 **Projeto Kosmos - Inteligência Artificial Geral**
 
-Para mais informações técnicas ou discussões sobre investimento, entre em contato.
+Para mais informações técnicas ou discussões sobre investimento, entre em contato:
+marcospfa15@gmail.com
 
 ---
 
@@ -454,6 +455,7 @@ Para mais informações técnicas ou discussões sobre investimento, entre em co
 **Kosmos © 2024-2026**
 
 </div>
+
 
 
 
