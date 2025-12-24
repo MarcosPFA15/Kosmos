@@ -129,7 +129,7 @@ O **cérebro executivo** do sistema. Coordena todos os outros módulos.
 - ✅ Objetivos persistentes com inércia (resistem a instruções conflitantes)
 - ✅ Criação autônoma de novas tarefas
 - ✅ Planejamento imaginativo via World Model
-- ✅ Evolução cognitiva automática a cada N ciclos
+- ✅ Evolução cognitiva automática a cada X ciclos
 - ✅ Pesquisa web autônoma
 - ✅ Execução de comandos do sistema
 
