@@ -119,7 +119,7 @@ O **cérebro executivo** do sistema. Coordena todos os outros módulos.
 │  1. Recebe input (usuário ou autônomo)                          │
 │  2. Verifica conflitos com objetivos persistentes               │
 │  3. Consulta World Model para avaliar ações                     │
-│  4. Decide próxima ação                                │
+│  4. Decide próxima ação                                         │
 │  5. Executa e registra resultado                                │
 │  6. Aprende com feedback                                        │
 └─────────────────────────────────────────────────────────────────┘
@@ -454,5 +454,6 @@ Para mais informações técnicas ou discussões sobre investimento, entre em co
 **Kosmos AGI © 2024-2025**
 
 </div>
+
 
 
