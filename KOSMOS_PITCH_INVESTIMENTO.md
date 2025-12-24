@@ -15,7 +15,7 @@
 
 ## 📋 Sumário Executivo
 
-**Kosmos** é um protótipo de Inteligência Artificial Geral (AGI) modular, desenvolvida com arquitetura cognitiva inspirada no cérebro humano. O sistema integra **32+ módulos especializados** que trabalham de forma coordenada para permitir aprendizado contínuo, raciocínio causal, memória de longo prazo e tomada de decisão autônoma.
+**Kosmos** é um protótipo de Inteligência Artificial Geral modular, desenvolvida com arquitetura cognitiva inspirada no cérebro humano. O sistema integra **32+ módulos especializados** que trabalham de forma coordenada para permitir aprendizado contínuo, raciocínio causal, memória de longo prazo e tomada de decisão autônoma.
 
 ### 🎯 Proposta de Valor
 
