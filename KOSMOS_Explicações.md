@@ -145,30 +145,30 @@ Inspirada na arquitetura **Hippocampus → Neocortex**.
 │  ARQUITETURA DE MEMÓRIA                                          │
 ├──────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  ┌─────────────────┐         ┌─────────────────┐                │
-│  │   BUFFER        │  ───►   │  ARQUIVO        │                │
-│  │   CURTO PRAZO   │ consol. │  LONGO PRAZO    │                │
-│  │   (100 episódios)│         │  (JSONL + Neo4j)│                │
-│  └─────────────────┘         └─────────────────┘                │
+│  ┌─────────────────┐         ┌─────────────────┐                 │
+│  │   BUFFER        │  ───►   │  ARQUIVO        │                 │
+│  │   CURTO PRAZO   │ consol. │  LONGO PRAZO    │                 │
+│  │  (100 episódios)│         │  (JSONL + Neo4j)│                 │
+│  └─────────────────┘         └─────────────────┘                 │
 │                                                                  │
-│  • Embeddings SBERT (384-dim)                                   │
-│  • Busca por similaridade semântica                             │
-│  • Consolidação durante "sono"                                  │
-│  • Replay de experiências importantes                           │
+│  • Embeddings SBERT (384-dim)                                    │
+│  • Busca por similaridade semântica                              │
+│  • Consolidação durante "sono"                                   │
+│  • Replay de experiências importantes                            │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
 #### CerebroOntologia v1.0
 Sistema de **conhecimento ancorado** onde cada conceito possui:
 
-| Atributo | Descrição |
-|----------|-----------|
-| Embedding | Vetor 384-dim via Sentence-BERT |
-| Definição | Texto explicativo |
-| Exemplos | 2+ instâncias concretas |
-| Relações | Links para outros conceitos |
-| Affordances | O que o objeto "permite fazer" |
-| Propriedades Físicas | Atributos mensuráveis |
+|        Atributo         |            Descrição            |
+|-------------------------|---------------------------------|
+| Embedding               | Vetor 384-dim via Sentence-BERT |
+| Definição               | Texto explicativo               |
+| Exemplos                | 2+ instâncias concretas         |
+| Relações                | Links para outros conceitos     |
+| Affordances             | O que o objeto "permite fazer"  |
+| Propriedades Físicas    | Atributos mensuráveis           |
 
 **Nível de compreensão calculado automaticamente!**
 
@@ -220,14 +220,14 @@ flowchart LR
 │  Problema: Aprender nova tarefa com POUCOS exemplos              │
 │                                                                  │
 │  Solução Kosmos:                                                 │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │    MAML     │ +  │    LoRA     │ =  │  Adaptação  │         │
-│  │ (Meta-Learn)│    │ (Efficient) │    │   RÁPIDA    │         │
-│  └─────────────┘    └─────────────┘    └─────────────┘         │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐           │
+│  │    MAML     │ +  │    LoRA     │ =  │  Adaptação  │           │
+│  │ (Meta-Learn)│    │ (Efficient) │    │   RÁPIDA    │           │
+│  └─────────────┘    └─────────────┘    └─────────────┘           │
 │                                                                  │
-│  • 3-5 exemplos → Novo comportamento                            │
-│  • Fine-tuning em segundos (não horas)                          │
-│  • Preserva conhecimento anterior (EWC)                         │
+│  • 3-5 exemplos → Novo comportamento                             │
+│  • Fine-tuning em segundos (não horas)                           │
+│  • Preserva conhecimento anterior (EWC)                          │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -237,12 +237,12 @@ Sistema de **seleção natural interna** para conhecimento:
 
 ```
 PROPOSTA → VALIDAÇÃO EPISTÊMICA → PROMOÇÃO CONDICIONAL → CONSOLIDAÇÃO
-           ┌─────────────────┐   ┌─────────────────────┐
+           ┌──────────────────┐   ┌──────────────────────┐
            │ • Novidade       │   │ • Generaliza?        │
            │ • Reduz incerteza│   │ • Não degrada?       │
            │ • Consistente?   │   │ • Baixa entropia?    │
            │ • Transferível?  │   │ • Anti-loop?         │
-           └─────────────────┘   └─────────────────────┘
+           └──────────────────┘   └──────────────────────┘
 ```
 
 ---
@@ -311,14 +311,14 @@ O sistema pode **melhorar seu próprio código**, mas com proteções:
 │  FLUXO DE AUTO-MODIFICAÇÃO                                       │
 ├──────────────────────────────────────────────────────────────────┤
 │                                                                  │
-│  ✅ PERMITIDO:                    ❌ BLOQUEADO:                   │
+│  ✅ PERMITIDO:                    ❌ BLOQUEADO:                 │
 │  • Criar novos primitivos         • Modificar cerebro_etico.py   │
 │  • Adicionar funções              • Remover funções críticas     │
 │  • Otimizar código existente      • Bypass de segurança          │
 │  • Expandir ontologia             • Modificar main.py            │
 │                                                                  │
 │  Workflow:                                                       │
-│  PROPOSTA → SIMULAÇÃO → AVALIAÇÃO RISCO → APROVAÇÃO → EXECUÇÃO  │
+│  PROPOSTA → SIMULAÇÃO → AVALIAÇÃO RISCO → APROVAÇÃO → EXECUÇÃO   │
 │                 ↓              ↓                                 │
 │             Sandbox        0.0-1.0                               │
 │             (testa)        (score)                               │
@@ -331,17 +331,17 @@ O sistema pode **melhorar seu próprio código**, mas com proteções:
 
 ### Comparativo AGI
 
-| Capacidade | Status | Implementação |
-|------------|--------|---------------|
-| Generalização | 🟡 Parcial | Meta-learning + Transfer Learning |
-| Memória Longo Prazo | 🟢 Implementado | Episódica + Ontologia + Neo4j |
-| Raciocínio Causal | 🟢 Implementado | Grafos causais + Contrafactuais |
-| Planejamento Hierárquico | 🟢 Implementado | HTN + World Model |
-| Autonomia | 🟢 Implementado | Governante + Objetivos Persistentes |
-| Meta-Cognição | 🟢 Implementado | Consciente + Self-Model |
-| Auto-Melhoria | 🟡 Controlado | AutoModificador + Sandbox |
-| Multimodal | 🟢 Implementado | CLIP + Whisper + GMU |
-| Embodiment | 🟡 Experimental | Isaac Gym (WSL2) |
+|       Capacidade        |      Status      |            Implementação            |
+|-------------------------|------------------|-------------------------------------|
+| Generalização           | 🟡 Parcial      | Meta-learning + Transfer Learning   |
+| Memória Longo Prazo     | 🟢 Implementado | Episódica + Ontologia + Neo4j       |
+| Raciocínio Causal       | 🟢 Implementado | Grafos causais + Contrafactuais     |
+| Planejamento Hierárquico| 🟢 Implementado | HTN + World Model                   |
+| Autonomia               | 🟢 Implementado | Governante + Objetivos Persistentes |
+| Meta-Cognição           | 🟢 Implementado | Consciente + Self-Model             |
+| Auto-Melhoria           | 🟡 Controlado   | AutoModificador + Sandbox           |
+| Multimodal              | 🟢 Implementado | CLIP + Whisper + GMU                |
+| Embodiment              | 🟡 Experimental | Isaac Gym (WSL2)                    |
 
 ### Inventário de Módulos
 
@@ -406,21 +406,21 @@ gantt
 
 ### Mercado
 
-| Segmento | TAM (2025) | CAGR |
-|----------|------------|------|
-| AGI Research | $15B | 35% |
-| Enterprise AI | $180B | 25% |
-| Autonomous Systems | $75B | 30% |
+|      Segmento      | TAM (2025) | CAGR |
+|--------------------|------------|------|
+| AGI Research       |    $15B    |  35% |
+| Enterprise AI      |    $180B   |  25% |
+| Autonomous Systems |    $75B    |  30% |
 
 ### Diferenciais Competitivos
 
-| Aspecto | Kosmos | Concorrentes Típicos |
-|---------|--------|---------------------|
-| Arquitetura | Modular (32+ cérebros) | Monolítica |
-| Memória | Persistente (Neo4j + JSONL) | Limitada ao contexto |
-| Autonomia | Objetivos de longo prazo | Reativa |
-| Evolução | Auto-modificação controlada | Fixa |
-| Custo | Open-source base | Proprietário |
+| Aspecto     |           Kosmos           | Concorrentes Típicos |
+|-------------|----------------------------|----------------------|
+| Arquitetura | Modular (32+ cérebros)     | Monolítica           |
+| Memória     | Persistente (Neo4j + JSONL)| Limitada ao contexto |
+| Autonomia   | Objetivos de longo prazo   | Reativa              |
+| Evolução    | Auto-modificação controlada| Fixa                 |
+| Custo       | Open-source base           | Proprietário         |
 
 ### Uso de Recursos
 
@@ -429,10 +429,10 @@ gantt
 │  ALOCAÇÃO DO INVESTIMENTO                                       │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  40% │████████████████████│ P&D (RAG, RL, Benchmarks)          │
-│  25% │█████████████       │ Infraestrutura (GPU, Cloud)        │
-│  20% │██████████          │ Equipe (AI Researchers)            │
-│  15% │███████             │ Operações + Legal                  │
+│  40% │████████████████████│ Infraestrutura (GPU, Cloud)         │
+│  25% │█████████████       │ P&D (RAG, RL, Benchmarks)           │
+│  20% │██████████          │ Equipe (AI Researchers)             │
+│  15% │███████             │ Operações + Legal                   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -449,11 +449,12 @@ Para mais informações técnicas ou discussões sobre investimento, entre em co
 
 <div align="center">
 
-*"O objetivo não é criar uma IA que imita humanos, mas uma que complementa humanos."*
+*"O objetivo é simples, mudar este mundo."*
 
-**Kosmos AGI © 2024-2025**
+**Kosmos © 2024-2026**
 
 </div>
+
 
 
 
