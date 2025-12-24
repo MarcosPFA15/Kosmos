@@ -1,5 +1,5 @@
-# 🧠 KOSMOS AGI
-## Plataforma Modular de Inteligência Artificial Geral
+# 🧠 KOSMOS
+## Plataforma Modular de uma proto Inteligência Artificial Geral
 
 <div align="center">
 
