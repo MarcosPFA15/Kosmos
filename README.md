@@ -444,7 +444,7 @@ gantt
 **Projeto Kosmos - Inteligência Artificial Geral**
 
 Para mais informações técnicas ou discussões sobre investimento, entre em contato:
-marcospfa15@gmail.com
+marcos.freitas@shiftyforge.com
 
 ---
 
